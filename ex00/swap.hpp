@@ -8,4 +8,9 @@ void swap(T &a, T &b) {
 	b = tmp;
 }
 
+template <typename T>
+void swap(T *a, T *b) {
+	::swap(*a, *b);
+}
+
 #endif
