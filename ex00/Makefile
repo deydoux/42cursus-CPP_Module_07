@@ -1,7 +1,6 @@
 NAME = ex00
 
-SOURCES = \
-main.cpp \
+SOURCES = main.cpp
 
 CXX = c++
 CXXFLAGS = -MD -std=c++98 -Wall -Wextra -Werror
