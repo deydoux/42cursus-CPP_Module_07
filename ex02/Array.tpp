@@ -14,7 +14,7 @@ template <typename T>
 Array<T>::Array(const Array &other): _size(other._size), _elements(new T[_size]) {
 	std::cerr << "Array copy constructor called" << std::endl;
 	for (unsigned int i = 0; i < _size; i++)
-		_elements[i] = _elements[i];
+		_elements[i] = other._elements[i];
 }
 
 template <typename T>
@@ -25,9 +25,12 @@ Array<T>::~Array() {
 
 template <typename T>
 Array<T> &Array<T>::operator=(const Array &rhs) {
-	this->~Array();
-	Array array(rhs);
-	return (array);
+	_size = rhs._size;
+	delete _elements;
+	_elements = new T[_size];
+	for (unsigned int i = 0; i < _size; i++)
+		_elements[i] = rhs._elements[i];
+	return (*this);
 }
 
 template <typename T>
