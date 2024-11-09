@@ -17,11 +17,6 @@ public:
 	Array &operator=(const Array &rhs);
 	T &operator[](unsigned int idx) const;
 	unsigned int size() const;
-
-	class OutOfBoundsException: public std::exception {
-	public:
-		const char *what() const throw();
-	};
 };
 
 #endif

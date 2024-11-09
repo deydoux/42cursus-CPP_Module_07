@@ -36,7 +36,7 @@ Array<T> &Array<T>::operator=(const Array &rhs) {
 template <typename T>
 T &Array<T>::operator[](unsigned int idx) const {
 	if (idx >= _size)
-		throw (OutOfBoundsException());
+		throw (std::out_of_range("Out of bounds index"));
 	return (_elements[idx]);
 }
 
