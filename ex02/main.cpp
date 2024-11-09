@@ -26,4 +26,27 @@ int main() {
 		} catch (std::exception &e) {
 			std::cout << e.what() << std::endl;
 		}
+
+	Array<int> fibCopy(fib);
+	for (unsigned int i = 0; i <= fibCopy.size(); i++)
+		try {
+			std::cout << fibCopy[i]-- << std::endl;
+		} catch (std::exception &e) {
+			std::cout << e.what() << std::endl;
+		}
+
+	for (unsigned int i = 0; i <= fib.size(); i++)
+		try {
+			std::cout << fib[i] << std::endl;
+		} catch (std::exception &e) {
+			std::cout << e.what() << std::endl;
+		}
+
+	fib = fibCopy;
+	for (unsigned int i = 0; i <= fib.size(); i++)
+		try {
+			std::cout << fib[i] << std::endl;
+		} catch (std::exception &e) {
+			std::cout << e.what() << std::endl;
+		}
 }
