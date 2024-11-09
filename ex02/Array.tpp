@@ -41,7 +41,7 @@ T &Array<T>::operator[](unsigned int idx) const {
 }
 
 template <typename T>
-unsigned int Array<T>::size() {
+unsigned int Array<T>::size() const {
 	return (_size);
 }
 
