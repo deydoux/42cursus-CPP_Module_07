@@ -44,8 +44,3 @@ template <typename T>
 unsigned int Array<T>::size() const {
 	return (_size);
 }
-
-template <typename T>
-const char *Array<T>::OutOfBoundsException::what() const throw() {
-	return ("Out of bounds element");
-}
